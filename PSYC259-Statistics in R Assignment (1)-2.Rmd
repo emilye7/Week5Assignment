@@ -1,0 +1,66 @@
+---
+title: 'PSYC259: Statistics in R Assignment'
+author: "Amanda Mae Woodward"
+date: "11/2/2020"
+output: html_document
+---
+##Part 1
+1. Open the diamonds dataset from ggplot2.   
+2. Run a correlation between the x and y variables. What do you notice? 
+3. What is the correlation between price and carat?
+4. Create a linear model predicting price from table. What is the coefficient for table? 
+5. Run a regression and an Anova predicting price from color. What do you notice? 
+6. Open the warpbreaks dataset. What test would you use to determine the correlation between wool type and breaks?
+7. What is the correlation between wool type and breaks? 
+8. A student has a 25 question, multiple choice test. Each question has 4 choices. If they answered 17 questions correctly, did their responses differ from chance?  
+
+--------------------------
+##Part 2
+Here is a little information about the variables in the dataset you'll use for part 2. 
+**School variables:**
+schoolid: school's ID number
+housepov: % of households in neighborhood of school below poverty level
+
+**Classroom variables:**
+classid: classroom's ID number
+yearstea: years of teacher's experience in teaching the first grade
+mathprep: the number of preparatory courses on the first grade contents and methods followed by teacher
+mathknow: teacher's knowledge of first grade math contents
+
+**Student variables:**
+childid: Student ID
+mathgain: student's gain in math achievement scores from spring of K through spring of first grade
+mathkind: student's math score in spring of kindergarten year
+sex: student's sex
+minority: if minority or not
+ses: child's socioeconomic status
+
+1. Import the multilevel data from the SchoolsClassStudents.csv file
+
+2. Scale and center your mathgain, ses, and mathprep variables.
+
+3. Load lme4 and lmerTest
+
+4. Run an intercept only model predicting math improvement for students.
+
+BONUS: What is the between-class variance? What is the within-class variance?
+
+5. Run a model of students nested within classrooms to determine if the first-level predictor of child SES predicts child's improvement in scores, without modeling a random slope.
+
+BONUS: What does this tell us and what does a fixed slope not tell us?
+
+6. Compare the model from level-1 predictor model of SES (question 5) to the intercept only model with a likelihood ratio test
+
+7. Run the level-1 predictor model of SES (question 5) but now model with a random slope for SES. Does your inference change? What parameter in the output is new with a random slope for SES?
+
+BONUS: You get a warning here. What is it and why might you be getting it?
+
+8. Compare the level-1 predictor model of SES with a fixed slope and random intercept (question 5) to the intercept-only model (question 4). Now, compare the level-1 predictor model of SES with a random slope and random intercept (question 7) to the intercept-only model. How does your inference differ? What do these different LRTs tell you?
+
+9. Run a model to determine of students nested within classrooms to determine if the level 2 predictor of teacher's preparatory courses predict child's improvement in scores?
+
+10. Run a model with an interaction between student level SES and classroom level preparatory courses (i.e. cross-level interaction) predicting child math improvements, without modeling either as a random slope.
+
+11. Run a model with a cross-level interaction between student level SES and classroom level preparatory courses predicting child math improvement, while modeling SES as a random slope.
+
+BONUS: What looks different between the model in question eight versus the model in question nine? Why might this be?
